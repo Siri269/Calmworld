@@ -1,5 +1,5 @@
 function navigateToNewScreen() {
-  window.location.href = "Hold-Breath.html";
+  window.location.href = "siri269.github.io/Calmworld/Hold-Breath.html";
 }
 
 document.getElementById("changeScreenButton").addEventListener("click", function() {
