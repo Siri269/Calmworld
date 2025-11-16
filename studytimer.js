@@ -1,4 +1,4 @@
-  let timeLeft = 0;
+ let timeLeft = 0;
 let interval = null;
 const minInput = document.getElementById('min');
 const display = document.getElementById('display');
