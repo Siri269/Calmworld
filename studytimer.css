@@ -22,3 +22,24 @@ font-size: 40px;
 margin: 20px;
 font-family: cursive;
 }
+.navbar ul{
+  	list-style-type:none;
+    padding: 0px;
+    margin:0px;
+    overflow: hidden;
+  }
+  .navbar a{
+  	color: white;
+    text-decoration: none;
+    padding:15px;
+    display: block;
+    text-align: center;
+  }
+  .navbar a:hover{
+  	background-color: rgb(8,19,48); 
+  }
+  .navbar li{
+  	float: left;
+    font-family:cursive;
+    border-
+  }
