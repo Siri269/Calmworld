@@ -46,3 +46,9 @@ startBtn.textContent = 'Start';
 });
 
 update();
+- var np = 3;
+- var ng = 5;
+- var n = ng*np;
+
+while n--
+	.poly
