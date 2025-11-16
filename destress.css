@@ -45,7 +45,8 @@
     overflow: hidden;
   }
   .navbar a{
-  	color: black;
+  	color: white;
+    text-color:white;
     text-decoration: none;
     padding:15px;
     display: block;
@@ -53,8 +54,11 @@
   }
   .navbar a:hover{
   	background-color: white; 
+    text-color:black;
+    color:black;
   }
   .navbar li{
   	float: left;
     font-family:cursive;
+    text-color:white;
   }      
