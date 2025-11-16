@@ -6,22 +6,24 @@
     padding: 0px;
     margin:0px;
     overflow: hidden;
+    text-color:white;
   }
   .navbar a{
   	color: white;
     text-decoration: none;
+    text-color:white;
     padding:15px;
     display: block;
     text-align: center;
   }
   .navbar a:hover{
   	background-color: rgb(8,19,48); 
-    color:white;
+    text-color:white;
   }
   .navbar li{
   	float: left;
     font-family:cursive;
-    color:white;
+    text-color:white;
   }
 
 body {
