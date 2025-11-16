@@ -1,8 +1,13 @@
   body {
   	background-color: rgb(171, 247, 207);
       
-  
-  
+  h1 {
+    font-size:50px
+  }
+
+  p {
+    font-size:25px
+  }
 
   }
   .beach-img {
