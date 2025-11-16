@@ -3,11 +3,11 @@ function navigateToNewScreen() {
 }
 
 document.getElementById("changeScreenButton").addEventListener("click", function() {
-  setTimeout(navigateToNewScreen, 4000);
+  setTimeout(navigateToNewScreen, 500);
 });
 
 function change(){
-  setTimeout(navigateToNewScreen, 4000);
+  setTimeout(navigateToNewScreen, 500);
 }
 
 window.onload = change;
