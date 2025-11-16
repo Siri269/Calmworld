@@ -8,7 +8,7 @@
     overflow: hidden;
   }
   .navbar a{
-  	color: white;
+  	color: black;
     text-decoration: none;
     padding:15px;
     display: block;
@@ -16,6 +16,7 @@
   }
   .navbar a:hover{
   	background-color: rgb(8,19,48); 
+    color:white;
   }
   .navbar li{
   	float: left;
