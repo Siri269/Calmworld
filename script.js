@@ -1,86 +1,48 @@
-let timer;
-let minutes = 15;
-let seconds = 0;
-let isPaused = false;
-let enteredTime = null;
+ let timeLeft = 0;
+let interval = null;
+const minInput = document.getElementById('min');
+const display = document.getElementById('display');
+const startBtn = document.getElementById('start');
+const resetBtn = document.getElementById('reset');
 
-function startTimer() {
-    timer = setInterval(updateTimer, 1000);
+function format(t) {
+const m = Math.floor(t / 60);
+const s = t % 60;
+return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
 }
 
-function updateTimer() {
-    const timerElement =
-        document.getElementById('timer');
-    timerElement.textContent = 
-        formatTime(minutes, seconds);
-
-    if (minutes === 0 && seconds === 0) {
-        clearInterval(timer);
-        alert('Time is up! Take a break.');
-    } else if (!isPaused) {
-        if (seconds > 0) {
-            seconds--;
-        } else {
-            seconds = 59;
-            minutes--;
-        }
-    }
+function update() {
+display.textContent = format(timeLeft);
 }
 
-function formatTime(minutes, seconds) {
-    return 
-    `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+function tick() {
+timeLeft--;
+update();
+if (timeLeft <= 0) {
+clearInterval(interval);
+interval = null;
+startBtn.textContent = 'Start';
+}
 }
 
-function togglePauseResume() {
-    const pauseResumeButton =
-        document.querySelector('.control-buttons button');
-    isPaused = !isPaused;
-
-    if (isPaused) {
-        clearInterval(timer);
-        pauseResumeButton.textContent = 'Resume';
-    } else {
-        startTimer();
-        pauseResumeButton.textContent = 'Pause';
-    }
+startBtn.addEventListener('click', () => {
+if (interval) {
+clearInterval(interval);
+interval = null;
+startBtn.textContent = 'Start';
+} else {
+if (timeLeft === 0) timeLeft = minInput.value * 60;
+interval = setInterval(tick, 1000);
+startBtn.textContent = 'Stop';
 }
+});
 
-function restartTimer() {
-    clearInterval(timer);
-    minutes = enteredTime || 15;
-    seconds = 0;
-    isPaused = false;
-    const timerElement =
-        document.getElementById('timer');
-    timerElement.textContent =
-        formatTime(minutes, seconds);
-    const pauseResumeButton =
-        document.querySelector('.control-buttons button');
-    pauseResumeButton.textContent = 'Pause';
-    startTimer();
-}
+resetBtn.addEventListener('click', () => {
+clearInterval(interval);
+interval = null;
+timeLeft = minInput.value * 60;
+update();
+startBtn.textContent = 'Start';
+});
 
-function chooseTime() {
-    const newTime = prompt('Enter new time in minutes:');
-    if (!isNaN(newTime) && newTime > 0) {
-        enteredTime = parseInt(newTime);
-        minutes = enteredTime;
-        seconds = 0;
-        isPaused = false;
-        const timerElement =
-            document.getElementById('timer');
-        timerElement.textContent =
-            formatTime(minutes, seconds);
-        clearInterval(timer);
-        const pauseResumeButton =
-            document.querySelector('.control-buttons button');
-        pauseResumeButton.textContent = 'Pause';
-        startTimer();
-    } else {
-        alert('Invalid input. Please enter'+
-              ' a valid number greater than 0.');
-    }
-}
-
-startTimer();
+update();
