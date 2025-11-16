@@ -1,7 +1,9 @@
   body {
 	background-color:dodgerblue;
 }
-  
+  a {
+	  font-size:5px
+  }
   h1 {
   	color:white;
     font-family:Snell Roundhand;
