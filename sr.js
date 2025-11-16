@@ -4,7 +4,7 @@ var width = window.innerWidth;
 var height = window.innerHeight;
 var dots = [];
 var mousePos = {x: -20, y: -20};
-var colors = ['#326da8', '#328ba8', '#5e32a8', '#7932a8', '#a2dcf2']
+var colors = ['#a8e6cf', '#dcedc1', '#ffd3b6', '#ffaaa5', '#ff8b94']
 
 function Dot(x, y, color) {
   var _this = this;
