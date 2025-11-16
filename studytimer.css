@@ -1,4 +1,53 @@
- * {
+  h1{
+  	text-align: center;
+  }
+  .navbar ul{
+  	list-style-type:none;
+    padding: 0px;
+    margin:0px;
+    overflow: hidden;
+  }
+  .navbar a{
+  	color: white;
+    text-decoration: none;
+    padding:15px;
+    display: block;
+    text-align: center;
+  }
+  .navbar a:hover{
+  	background-color: rgb(8,19,48); 
+  }
+  .navbar li{
+  	float: left;
+    font-family:cursive;
+  }
+
+body {
+font-family: cursive;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+background: #f0f0f0;
+}
+.timer {
+background: white;
+padding: 30px;
+border-radius: 10px;
+text-align: center;
+}
+input, button {
+margin: 5px;
+padding: 10px;
+font-size: 16px;
+}
+#display {
+font-size: 40px;
+margin: 20px;
+font-family: cursive;
+}
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -77,6 +126,8 @@ body {
     opacity: 0;
   }
 }
+
+/* Additional twinkling stars with different animation timing */
 .stars::after {
   content: "";
   position: absolute;
@@ -92,52 +143,4 @@ body {
     51vw 92vh 2px white, 59vw 78vh 1px white;
   animation: twinkle 6s infinite linear reverse;
 }
-  h1{
-  	text-align: center;
-  }
-  .navbar ul{
-  	list-style-type:none;
-    padding: 0px;
-    margin:0px;
-    overflow: hidden;
-  }
-  .navbar a{
-  	color: white;
-    text-decoration: none;
-    padding:15px;
-    display: block;
-    text-align: center;
-  }
-  .navbar a:hover{
-  	background-color: rgb(8,19,48); 
-  }
-  .navbar li{
-  	float: left;
-    font-family:cursive;
-  }
 
-body {
-font-family: cursive;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-margin: 0;
-background: #f0f0f0;
-}
-.timer {
-background: white;
-padding: 30px;
-border-radius: 10px;
-text-align: center;
-}
-input, button {
-margin: 5px;
-padding: 10px;
-font-size: 16px;
-}
-#display {
-font-size: 40px;
-margin: 20px;
-font-family: cursive;
-}
